@@ -1,0 +1,13 @@
+<ehcache>
+
+    <diskStore path="java.io.tmpdir" />
+
+    <cache name="instrumentModifierCache"
+           maxEntriesLocalHeap="10000"
+           eternal="false"
+           timeToIdleSeconds="5"
+           timeToLiveSeconds="5"
+           transactionalMode="off">
+    </cache>
+
+</ehcache>

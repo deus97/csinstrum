@@ -1,0 +1,5 @@
+INSTRUMENT1: mean price is: 3.3720
+INSTRUMENT2: date limited (from 2014-10-31 to 2014-12-01) mean price is: 18.5150
+INSTRUMENT3: max price was detected on: 1998-06-26, price (multiplied by modifier) = 449.940
+INSTRUMENT4: sum of 10 newest instruments is: 2.97
+INSTRUMENT5: sum of 10 newest instruments is: 25.7182
