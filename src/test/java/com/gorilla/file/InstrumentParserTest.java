@@ -44,8 +44,8 @@ public class InstrumentParserTest {
 
     @Test
     public void testParseInstrument() throws Exception {
-        String instrumentOneStr =    "INSTRUMENT1,15-Mar-1996,2.572";
-        String instrumentTwoStr =    "INSTRUMENT2,16-Mar-1997,2.672";
+        String instrumentOneStr =    "INSTRUMENT1,14-Mar-1996,2.572";
+        String instrumentTwoStr =    "INSTRUMENT2,12-Mar-1997,2.672";
 
         Optional<Instrument> instrumentOne = unit.parseInstrument(instrumentOneStr);
         Optional<Instrument> instrumentTwo = unit.parseInstrument(instrumentTwoStr);
@@ -54,8 +54,8 @@ public class InstrumentParserTest {
         assertTrue(instrumentTwo.isPresent());
         assertEquals("INSTRUMENT1", instrumentOne.orElse(null).getName());
         assertEquals("INSTRUMENT2", instrumentTwo.orElse(null).getName());
-        assertEquals(LocalDate.of(1996, Month.MARCH, 15), instrumentOne.orElse(null).getDate());
-        assertEquals(LocalDate.of(1997, Month.MARCH, 16), instrumentTwo.orElse(null).getDate());
+        assertEquals(LocalDate.of(1996, Month.MARCH, 14), instrumentOne.orElse(null).getDate());
+        assertEquals(LocalDate.of(1997, Month.MARCH, 12), instrumentTwo.orElse(null).getDate());
         assertEquals(new BigDecimal("2.572"), instrumentOne.orElse(null).getPrice());
         assertEquals(new BigDecimal("2.672"), instrumentTwo.orElse(null).getPrice());
 
