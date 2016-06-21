@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="38614b09-dab3-4da1-9b87-bcacc6744fc8" name="Default" comment="" />
+    <list default="true" id="38614b09-dab3-4da1-9b87-bcacc6744fc8" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gorilla/util/InstrumentParser.java" afterPath="$PROJECT_DIR$/src/main/java/com/gorilla/util/InstrumentParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/gorilla/file/InstrumentParserTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/gorilla/file/InstrumentParserTest.java" />
+    </list>
     <ignored path="instruments.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -53,11 +56,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InstrumentsSupplier.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="InstrumentsSupplier.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gorilla/file/InstrumentsSupplier.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.0">
-              <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="49" column="40" selection-start-line="49" selection-start-column="40" selection-end-line="49" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -65,11 +68,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InstrumentParserTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/gorilla/file/InstrumentParserTest.java">
+      <file leaf-file-name="InstrumentParser.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gorilla/util/InstrumentParser.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InstrumentParserTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/gorilla/file/InstrumentParserTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.67814857">
+              <caret line="55" column="24" selection-start-line="55" selection-start-column="24" selection-end-line="55" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -150,8 +163,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/gorilla/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gorilla/file/InstrumentsSupplier.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gorilla/calculation/impl/CalculationServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/gorilla/file/InstrumentParserTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gorilla/util/InstrumentParser.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/gorilla/file/InstrumentParserTest.java" />
       </list>
     </option>
   </component>
@@ -1226,43 +1239,43 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="InstrumentParserTest_testParseInstrument - 2016.06.21 at 17h 16m 18s.xml">
-      <configuration name="InstrumentParserTest.testParseInstrument" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="InstrumentParserTest_testParseInstrument - 2016.06.21 at 17h 16m 33s.xml">
-      <configuration name="InstrumentParserTest.testParseInstrument" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="InstrumentParserTest_testParseInstrument - 2016.06.21 at 17h 16m 52s.xml">
-      <configuration name="InstrumentParserTest.testParseInstrument" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="InstrumentParserTest_testParseInstrument - 2016.06.21 at 17h 17m 13s.xml">
-      <configuration name="InstrumentParserTest.testParseInstrument" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="InstrumentParserTest_testParseInstrument - 2016.06.21 at 17h 41m 21s.xml">
       <configuration name="InstrumentParserTest.testParseInstrument" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LastFewSummingCalculatorTest_testAccept - 2016.06.09 at 16h 25m 54s.xml">
-      <configuration name="LastFewSummingCalculatorTest.testAccept" configurationId="JUnit" />
+    <history-entry file="InstrumentParserTest_testParseInstrument - 2016.06.21 at 17h 45m 06s.xml">
+      <configuration name="InstrumentParserTest.testParseInstrument" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LastFewSummingCalculatorTest_testAccept - 2016.06.09 at 16h 26m 41s.xml">
-      <configuration name="LastFewSummingCalculatorTest.testAccept" configurationId="JUnit" />
+    <history-entry file="InstrumentParserTest_testParseInstrument - 2016.06.21 at 17h 45m 55s.xml">
+      <configuration name="InstrumentParserTest.testParseInstrument" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LastFewSummingCalculatorTest_testAccept - 2016.06.09 at 16h 29m 03s.xml">
-      <configuration name="LastFewSummingCalculatorTest.testAccept" configurationId="JUnit" />
+    <history-entry file="InstrumentParserTest_testParseInstrument - 2016.06.21 at 17h 46m 08s.xml">
+      <configuration name="InstrumentParserTest.testParseInstrument" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LastFewSummingCalculatorTest_testAccept - 2016.06.09 at 16h 30m 12s.xml">
-      <configuration name="LastFewSummingCalculatorTest.testAccept" configurationId="JUnit" />
+    <history-entry file="InstrumentParserTest_testParseInstrument - 2016.06.21 at 17h 46m 22s.xml">
+      <configuration name="InstrumentParserTest.testParseInstrument" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LastFewSummingCalculatorTest_testAccept - 2016.06.09 at 16h 30m 25s.xml">
-      <configuration name="LastFewSummingCalculatorTest.testAccept" configurationId="JUnit" />
+    <history-entry file="InstrumentParserTest_testParseInstrument - 2016.06.21 at 17h 46m 38s.xml">
+      <configuration name="InstrumentParserTest.testParseInstrument" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InstrumentParserTest_testParseInstrument - 2016.06.21 at 17h 48m 03s.xml">
+      <configuration name="InstrumentParserTest.testParseInstrument" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InstrumentParserTest_testParseInstrument - 2016.06.21 at 17h 50m 06s.xml">
+      <configuration name="InstrumentParserTest.testParseInstrument" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InstrumentParserTest_testParseInstrument - 2016.06.21 at 17h 50m 42s.xml">
+      <configuration name="InstrumentParserTest.testParseInstrument" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InstrumentParserTest_testParseInstrument - 2016.06.21 at 17h 50m 59s.xml">
+      <configuration name="InstrumentParserTest.testParseInstrument" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106497000" />
+    <option name="totallyTimeSpent" value="107054000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -1273,7 +1286,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7841502" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6996872" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5067779" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5067779" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2498618" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1303,7 +1316,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1712,29 +1725,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gorilla/file/InstrumentsSupplier.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="49" column="40" selection-start-line="49" selection-start-column="40" selection-end-line="49" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gorilla/util/InstrumentParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.60064584">
-          <caret line="42" column="36" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/gorilla/file/InstrumentParserTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.67814857">
+          <caret line="55" column="24" selection-start-line="55" selection-start-column="24" selection-end-line="55" selection-end-column="24" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gorilla/file/InstrumentsSupplier.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0">
-          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

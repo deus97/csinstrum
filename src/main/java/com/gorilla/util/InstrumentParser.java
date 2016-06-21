@@ -35,6 +35,7 @@ public class InstrumentParser {
     private Optional<Instrument> parseInstrument0(String str) {
         String[] values = str.split(config.getFiledSeparator());
         Optional<Instrument> result = Optional.empty();
+
         if(values.length == 3) {
             String name = values[0].trim();
             LocalDate date = LocalDate.parse(values[1].trim(), dateTimeFormatter);
