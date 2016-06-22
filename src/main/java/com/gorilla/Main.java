@@ -37,9 +37,11 @@ public class Main
             CalculationService calculationService = ctx.getBean(CalculationService.class);
             InstrumentsSupplier instrumentsSupplier = ctx.getBean(InstrumentsSupplier.class);
 
+            long before = System.currentTimeMillis();
             System.out.println("working...");
             instrumentsSupplier.iterator().forEachRemaining(calculationService::accept);
-            System.out.println("done!");
+            System.out.println("Done! Time spent: " + (System.currentTimeMillis()-before));
+
 
             printStatistics(calculationService.getStatisticsAsMap());
         }
