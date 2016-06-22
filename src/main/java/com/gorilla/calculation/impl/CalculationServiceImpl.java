@@ -39,7 +39,7 @@ public class CalculationServiceImpl implements CalculationService {
 
         executorService.shutdown();
         try {
-            if(!executorService.awaitTermination(1, TimeUnit.SECONDS)) {
+            if(!executorService.awaitTermination(5, TimeUnit.SECONDS)) {
                 executorService.shutdownNow();
             }
         } catch (InterruptedException e) {
@@ -58,7 +58,6 @@ public class CalculationServiceImpl implements CalculationService {
                     .orElse(BigDecimal.ONE);
 
             final Instrument instrumentWithMultiplier = new Instrument(instrument.getName(), instrument.getDate(), instrument.getPrice().multiply(multiplier));
-
 
             calculatorForInstrument.accept(instrumentWithMultiplier);
         });
