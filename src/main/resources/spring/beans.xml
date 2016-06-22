@@ -48,13 +48,12 @@
         <!-- Mapping between instrument names and calculation strategies
             same type of calculation strategy for different instruments is ok,
             many strategies for the same instrument is not, thus keys must be unique.
-            Unmapped instruments will get the default strategy-->
+            Unmapped instruments will get the default strategy defined by "defaultCalculator" alias-->
         <property name="mappings">
             <map key-type="java.lang.String" value-type="com.gorilla.calculation.StatisticsCalculator">
                 <entry key="INSTRUMENT1" value-ref="meanPriceCalculator"/>
                 <entry key="INSTRUMENT2" value-ref="dateLimitedMeanPriceCalculator"/>
                 <entry key="INSTRUMENT3" value-ref="dateOfMaxPriceFinderCalculator"/>
-                <!--any other instrument will use the "defaultCalculator" bean-->
             </map>
         </property>
     </bean>
