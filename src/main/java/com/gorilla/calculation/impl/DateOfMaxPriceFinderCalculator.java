@@ -11,7 +11,7 @@ public class DateOfMaxPriceFinderCalculator implements StatisticsCalculator {
     private Instrument mostExpensive = new Instrument("", LocalDate.now(), BigDecimal.ZERO);
 
     @Override
-    public void accept(Instrument instrument) {
+    public synchronized void accept(Instrument instrument) {
         if(mostExpensive.getPrice().compareTo(instrument.getPrice()) < 0) {
             mostExpensive = instrument;
         }

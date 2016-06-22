@@ -12,7 +12,7 @@ public class DateLimitedMeanPriceCalculator extends MeanPriceCalculator {
     private LocalDate to;
 
     @Override
-    public void accept(Instrument instrument) {
+    public synchronized void accept(Instrument instrument) {
         if(instrument.getDate().isAfter(from) && instrument.getDate().isBefore(to)) {
             super.accept(instrument);
         }

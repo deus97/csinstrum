@@ -16,7 +16,7 @@ public class MeanPriceCalculator implements StatisticsCalculator {
     private BigDecimal numberOfValues = BigDecimal.ZERO;
 
     @Override
-    public void accept(Instrument instrument) {
+    public synchronized void accept(Instrument instrument) {
 
         BigDecimal price = instrument.getPrice();
 

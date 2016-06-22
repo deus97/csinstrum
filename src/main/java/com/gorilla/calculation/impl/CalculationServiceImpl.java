@@ -8,9 +8,12 @@ import com.gorilla.calculation.StatisticsCalculator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.PreDestroy;
 import java.math.BigDecimal;
-import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
 @Service
@@ -22,20 +25,41 @@ public class CalculationServiceImpl implements CalculationService {
     @Autowired
     private PriceModifierDao priceModifierDao;
 
-    private Map<String, StatisticsCalculator> activeCalculators = new HashMap<>();
+    @Autowired
+    private ExecutorService executorService;
+
+    private Map<String, StatisticsCalculator> activeCalculators = new ConcurrentHashMap<>();
+
+    @PreDestroy
+    private void destroy() {
+        if(executorService==null) return;
+
+        executorService.shutdown();
+        try {
+            if(!executorService.awaitTermination(1, TimeUnit.SECONDS)) {
+                executorService.shutdownNow();
+            }
+        } catch (InterruptedException e) {
+            executorService.shutdownNow();
+        }
+    }
 
     @Override
-    public void accept(Instrument instrument) {
+    public void accept(final Instrument instrument) {
 
-        StatisticsCalculator calculatorForInstrument = getCalculatorForInstrument(instrument.getName());
+        executorService.submit(() -> {
+            StatisticsCalculator calculatorForInstrument = getCalculatorForInstrument(instrument.getName());
 
-        BigDecimal multiplier = priceModifierDao.getByInstrumentName(instrument.getName())
-                .map(x -> new BigDecimal(x.getMultiplier()))
-                .orElse(BigDecimal.ONE);
+            final BigDecimal multiplier = priceModifierDao.getByInstrumentName(instrument.getName())
+                    .map(x -> new BigDecimal(x.getMultiplier()))
+                    .orElse(BigDecimal.ONE);
 
-        instrument = new Instrument(instrument.getName(), instrument.getDate(), instrument.getPrice().multiply(multiplier));
+            final Instrument instrumentWithMultiplier = new Instrument(instrument.getName(), instrument.getDate(), instrument.getPrice().multiply(multiplier));
 
-        calculatorForInstrument.accept(instrument);
+
+            calculatorForInstrument.accept(instrumentWithMultiplier);
+        });
+
     }
 
     @Override

@@ -33,6 +33,9 @@
     <alias alias="defaultCalculator" name="fewNewestSummingCalculator"/>
     <!-- END Calculation strategies -->
 
+    <bean id="executorService" class="java.util.concurrent.Executors" factory-method="newFixedThreadPool">
+        <constructor-arg value="4"/>
+    </bean>
 
     <bean id="configurationService" class="com.gorilla.util.ConfigurationService">
         <property name="inputFileName" value="${instrument.file.path}"/>

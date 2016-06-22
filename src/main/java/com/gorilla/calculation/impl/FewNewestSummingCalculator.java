@@ -26,7 +26,7 @@ public class FewNewestSummingCalculator implements StatisticsCalculator {
      * Head is always the oldest instrument in the queue.
      */
     @Override
-    public void accept(Instrument instrument) {
+    public synchronized void accept(Instrument instrument) {
         if(fewNewest.size() < few) {
             fewNewest.add(instrument);
         } else if(instrument.getDate().isAfter(fewNewest.peek().getDate())) {

@@ -31,6 +31,7 @@ public class InstrumentsSupplier implements Iterable<Instrument> {
 
     @PreDestroy
     private void destroy() {
+        if(instrumentStream==null) return;
         instrumentStream.close(); //need to explicitly close a stream whose source is file
     }
 
