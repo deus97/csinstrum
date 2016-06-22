@@ -52,8 +52,8 @@
         <property name="mappings">
             <map key-type="java.lang.String" value-type="com.gorilla.calculation.StatisticsCalculator">
                 <entry key="INSTRUMENT1" value-ref="meanPriceCalculator"/>
-                <entry key="INSTRUMENT3" value-ref="dateLimitedMeanPriceCalculator"/>
-                <entry key="INSTRUMENT2" value-ref="dateOfMaxPriceFinderCalculator"/>
+                <entry key="INSTRUMENT2" value-ref="dateLimitedMeanPriceCalculator"/>
+                <entry key="INSTRUMENT3" value-ref="dateOfMaxPriceFinderCalculator"/>
             </map>
         </property>
     </bean>

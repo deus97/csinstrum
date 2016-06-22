@@ -20,7 +20,7 @@ public class DateLimitedMeanPriceCalculator extends MeanPriceCalculator {
             throw new IllegalArgumentException("From date is after to date.");
         }
 
-        //include limits i.e. change (from; to) to [from; to]
+        //include limits i.e. change (from; to) -> [from; to]
         from = from.minusDays(1);
         to = to.plusDays(1);
     }
