@@ -11,15 +11,15 @@
     <!-- BEGIN Calculation strategies -->
     <bean id="meanPriceCalculator" class="com.gorilla.calculation.impl.MeanPriceCalculator" scope="prototype"/>
     <bean id="dateLimitedMeanPriceCalculator" class="com.gorilla.calculation.impl.DateLimitedMeanPriceCalculator"
-          scope="prototype">
+          scope="prototype" init-method="init">
         <property name="from">
             <bean class="java.time.LocalDate" factory-method="parse">
-                <constructor-arg value="2014-10-31"/>
+                <constructor-arg value="2014-11-01"/>
             </bean>
         </property>
         <property name="to">
             <bean class="java.time.LocalDate" factory-method="parse">
-                <constructor-arg value="2014-12-01"/>
+                <constructor-arg value="2014-11-30"/>
             </bean>
         </property>
     </bean>
@@ -54,6 +54,7 @@
                 <entry key="INSTRUMENT1" value-ref="meanPriceCalculator"/>
                 <entry key="INSTRUMENT2" value-ref="dateLimitedMeanPriceCalculator"/>
                 <entry key="INSTRUMENT3" value-ref="dateOfMaxPriceFinderCalculator"/>
+                <!--any other instrument will use the "defaultCalculator" bean-->
             </map>
         </property>
     </bean>

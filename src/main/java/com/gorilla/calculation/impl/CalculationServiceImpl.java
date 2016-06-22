@@ -16,6 +16,9 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
+/**
+ * Service to calculate statistics for instruments.
+ */
 @Service
 public class CalculationServiceImpl implements CalculationService {
 

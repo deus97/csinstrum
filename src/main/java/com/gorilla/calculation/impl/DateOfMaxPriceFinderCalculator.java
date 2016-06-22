@@ -6,6 +6,9 @@ import com.gorilla.domain.Instrument;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
+/**
+ * Finds date when instrument had the highest price
+ */
 public class DateOfMaxPriceFinderCalculator implements StatisticsCalculator {
 
     private Instrument mostExpensive = new Instrument("", LocalDate.now(), BigDecimal.ZERO);

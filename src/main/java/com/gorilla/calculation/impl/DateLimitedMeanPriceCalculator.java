@@ -4,15 +4,29 @@ import com.gorilla.domain.Instrument;
 import org.springframework.beans.factory.annotation.Required;
 
 import java.time.LocalDate;
+import java.time.temporal.TemporalUnit;
 
+/**
+ * Calculates mean price of an instrument within the given date range
+ */
 public class DateLimitedMeanPriceCalculator extends MeanPriceCalculator {
 
     private LocalDate from;
 
     private LocalDate to;
 
+    public void init() {
+        if(from.isAfter(to)) {
+            throw new IllegalArgumentException("From date is after to date.");
+        }
+
+        //include limits i.e. change (from; to) to [from; to]
+        from = from.minusDays(1);
+        to = to.plusDays(1);
+    }
+
     @Override
-    public synchronized void accept(Instrument instrument) {
+    public void accept(Instrument instrument) {
         if(instrument.getDate().isAfter(from) && instrument.getDate().isBefore(to)) {
             super.accept(instrument);
         }

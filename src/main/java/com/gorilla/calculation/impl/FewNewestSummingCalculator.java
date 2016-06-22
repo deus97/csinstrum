@@ -8,6 +8,9 @@ import java.util.Comparator;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
+/**
+ * Calculates sum of few newest (with latest date) instruments.
+ */
 public class FewNewestSummingCalculator implements StatisticsCalculator {
 
     private int few;

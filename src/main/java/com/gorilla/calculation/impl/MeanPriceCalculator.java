@@ -9,6 +9,9 @@ import org.springframework.util.Assert;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
+/**
+ * Calculates mean price of instruments.
+ */
 public class MeanPriceCalculator implements StatisticsCalculator {
 
     private BigDecimal mean = BigDecimal.ZERO;
