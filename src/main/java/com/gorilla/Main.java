@@ -40,7 +40,7 @@ public class Main
             long before = System.currentTimeMillis();
             System.out.println("working...");
             instrumentsSupplier.iterator().forEachRemaining(calculationService::accept);
-            System.out.println("Done! Time spent: " + (System.currentTimeMillis()-before));
+            System.out.println("Done! Time spent: " + (System.currentTimeMillis()-before) + "ms");
 
 
             printStatistics(calculationService.getStatisticsAsMap());
