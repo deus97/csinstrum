@@ -25,7 +25,6 @@ public class Main
     public static void main( String[] args ) throws Exception {
         
         AbstractApplicationContext ctx = new ClassPathXmlApplicationContext("spring/spring-config.xml");
-        ctx.registerShutdownHook();
 
         config = ctx.getBean(ConfigurationService.class);
 
