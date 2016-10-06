@@ -11,6 +11,11 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Optional;
 
+/**
+ * Parse instrument from string of format:
+ * instrumentName; date; price
+ * Column separator and date format are configurable.
+ */
 @Component
 public class InstrumentParser {
 
@@ -36,6 +41,7 @@ public class InstrumentParser {
         String[] values = str.split(config.getFiledSeparator());
         Optional<Instrument> result = Optional.empty();
 
+        //only 3 values for each instrument - name; date; price
         if(values.length == 3) {
             String name = values[0].trim();
             LocalDate date = LocalDate.parse(values[1].trim(), dateTimeFormatter);

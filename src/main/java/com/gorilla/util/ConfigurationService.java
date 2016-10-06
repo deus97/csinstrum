@@ -46,7 +46,7 @@ public class ConfigurationService implements ApplicationContextAware {
     public StatisticsCalculator getDefaultCalculator() {
         StatisticsCalculator result = (StatisticsCalculator) ctx.getBean(DEFAULT_CALCULATOR_BEAN_ID);
         if(result == null) {
-            throw new IllegalStateException("Unable to lookup defaultCalculator, check your configuration.");
+            throw new IllegalStateException("Default calculator bean with id '" + DEFAULT_CALCULATOR_BEAN_ID + "' should not be NULL.");
         }
         return result;
     }

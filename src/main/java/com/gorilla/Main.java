@@ -41,7 +41,6 @@ public class Main
             instrumentsSupplier.iterator().forEachRemaining(calculationService::accept);
             System.out.println("Done! Time spent: " + (System.currentTimeMillis()-before) + "ms");
 
-
             printStatistics(calculationService.getStatisticsAsMap());
         }
 

@@ -7,10 +7,15 @@ import java.util.Map;
 
 public interface CalculationService {
 
+    /**
+     * Include given instrument into statistics
+     * @param instrument
+     */
     void accept(Instrument instrument);
 
     /**
-     * Key = instrument name, value = string representation of statistics for this instrument
+     * Generate full statistics and return it as Map.
+     * @return Map where Key is an instrument name, value is a string representation of statistics for this instrument
      */
     Map<String, String> getStatisticsAsMap();
 
