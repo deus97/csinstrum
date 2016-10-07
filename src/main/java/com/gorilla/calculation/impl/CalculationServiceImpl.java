@@ -83,4 +83,7 @@ public class CalculationServiceImpl implements CalculationService {
         activeCalculators.put(instrumentName, statisticsCalculator);
     }
 
+    public void setExecutorService(ExecutorService executorService) {
+        this.executorService = executorService;
+    }
 }

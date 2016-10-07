@@ -1,27 +1,33 @@
 package com.gorilla.calculation.impl;
 
 import com.gorilla.dao.PriceModifierDao;
+import com.gorilla.testutils.SameThreadExecutorService;
 import com.gorilla.util.ConfigurationService;
 import com.gorilla.domain.Instrument;
 import com.gorilla.calculation.StatisticsCalculator;
+import org.apache.commons.beanutils.BeanUtils;
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
+import org.mockito.Spy;
 import org.mockito.runners.MockitoJUnitRunner;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.Month;
+import java.util.Collection;
+import java.util.List;
 import java.util.Optional;
+import java.util.concurrent.*;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.*;
 
-@Ignore
 @RunWith(MockitoJUnitRunner.class)
 public class CalculationServiceImplTest {
 
@@ -42,6 +48,7 @@ public class CalculationServiceImplTest {
 
     @Before
     public void setUp() throws Exception {
+
         meanCalculatorMock = mock(MeanPriceCalculator.class);
         defaultCalculatorMock = mock(FewNewestSummingCalculator.class);
 
@@ -50,6 +57,8 @@ public class CalculationServiceImplTest {
         doReturn(defaultCalculatorMock).when(config).getDefaultCalculator();
 
         doReturn(Optional.empty()).when(priceModifierDao).getByInstrumentName(anyString());
+
+        unit.setExecutorService(new SameThreadExecutorService());
     }
 
     @Test
@@ -72,7 +81,7 @@ public class CalculationServiceImplTest {
 
     @Test
     public void shouldReturnStatisticsAsMap() throws Exception {
-        Instrument instrument = new Instrument("INSTRUMENT1", LocalDate.of(2016, Month.JUNE, 01), new BigDecimal("2.3"));
+        Instrument instrument = new Instrument(INSTRUMENT_NAME_1, LocalDate.of(2016, Month.JUNE, 01), new BigDecimal("2.3"));
         doReturn("Mean price = " + instrument.getPrice()).when(meanCalculatorMock).getStatisticsAsString();
 
         unit.accept(instrument);

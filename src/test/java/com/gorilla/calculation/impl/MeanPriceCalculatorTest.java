@@ -23,9 +23,9 @@ public class MeanPriceCalculatorTest {
         unit = new MeanPriceCalculator();
 
         data = new ArrayList<>();
-        data.add(new Instrument("INSTRUMENT1", LocalDate.of(2016, Month.JUNE, 01), new BigDecimal("2.3")));
-        data.add(new Instrument("INSTRUMENT1", LocalDate.of(2016, Month.JUNE, 01), new BigDecimal("2.4")));
-        data.add(new Instrument("INSTRUMENT1", LocalDate.of(2016, Month.JUNE, 01), new BigDecimal("2.5")));
+        data.add(new Instrument("INSTRUMENT1", LocalDate.of(2016, Month.JUNE, 1), new BigDecimal("2.3")));
+        data.add(new Instrument("INSTRUMENT1", LocalDate.of(2016, Month.JUNE, 1), new BigDecimal("2.4")));
+        data.add(new Instrument("INSTRUMENT1", LocalDate.of(2016, Month.JUNE, 1), new BigDecimal("2.5")));
     }
 
     @Test
